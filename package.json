@@ -4,11 +4,11 @@
   "description": "Project created with the purpose of fixing and learning knowledge from https://curso.dev",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev & docker compose -f infra/compose.yaml up -d",
+    "dev": "next dev -p 3000 & docker compose -f infra/compose.yaml up --no-recreate -d",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watchAll"
   },
   "author": "",
   "license": "MIT",
